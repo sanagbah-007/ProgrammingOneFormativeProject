@@ -3,7 +3,7 @@
 # It sets up a class to store assignments in memory and provides 
 # methods to add, display, filter, and summarize student grades.
 
-# Foundational class: handles assignment collection, list filtering, and summary calculations.
+# Foundational class: handles assignment collection, listing, filtering, and summary calculations.
 class GradeTracker:
     def __init__(self):
         # Set up an empty list to store assignments
@@ -22,16 +22,16 @@ class GradeTracker:
             print("\n[!] No assignments found.")
             return
 
-        print("\n" + "=" * 65)
+        print("\n" + "=" * 70)
         print(f"{'Type':<10} | {'Subject':<12} | {'Title':<15} | {'Score':<8} | {'Due Date':<10}")
-        print("=" * 65)
+        print("=" * 70)
 
         for item in assignment_list:
             # Format score as score/max_score (e.g., 85/100)
             score_str = f"{item.score:.1f}/{item.max_score:.1f}"
-            print(f"{item.type.capitalize():<10} | {item.subject.capitalize():<12} | {item.title:<15} | {score_str:<8} | {item.due_date:<10}")
+            print(f"{item.assignment_type.capitalize():<10} | {item.subject.capitalize():<12} | {item.title:<15} | {score_str:<8} | {item.due_date:<10}")
 
-        print("=" * 65)
+        print("=" * 70)
 
     def filter_assignments(self, subject=None, assignment_type=None, month=None):
         # Filter assignments based on subject, assignment type, and month.
@@ -85,3 +85,4 @@ class GradeTracker:
 
 
 
+            
