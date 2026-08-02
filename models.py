@@ -6,10 +6,10 @@
 
 # Foundational class: holds the subject name, task title, max_score, due_date and assignment_type.
 class Assignment:
-    def __init__(self, subject, title, score, max_score, due_date, a_type):
-        self.assignment_type = a_type.strip().lower()  # Convert assignment type to lowercase
-        
-        self.subject = subject.strip().lower()  # so 'Physics' and 'physics' are treated the same. 
+    def __init__(self, subject, title, score, max_score, due_date, assignment_type):
+        self.assignment_type = assignment_type.strip().lower()  # Convert assignment type to lowercase
+
+        self.subject = subject.strip().lower()  # so 'Physics' and 'physics' are treated the same.
         self.title = title.strip()
        
         self.score = float(score)  # Convert score to float for accuracy in calculations.
@@ -26,14 +26,14 @@ class Assignment:
 # Subclass, Homework, inheriting from Assignment.
 class Homework(Assignment):
     def __init__(self, subject, title, score, max_score, due_date):
-        super().__init__(subject, title, score, max_score, due_date, a_type ="homework") 
+        super().__init__(subject, title, score, max_score, due_date, assignment_type ="homework") 
         # Calls the foundational class constructor with the attributes specific to homework.
 
 
 # Subclass, Exam, inheriting from Assignment.
 class Exam(Assignment):
     def __init__(self, subject, title, score, max_score, due_date):
-        super().__init__(subject, title, score, max_score, due_date, a_type ="exam") 
+        super().__init__(subject, title, score, max_score, due_date, assignment_type ="exam") 
         # Calls the foundational class constructor with the attributes specific to exams.
 
 
