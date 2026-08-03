@@ -81,7 +81,7 @@ class GradeTracker:
             print(f"\nHighest Scoring Assignment: {highest_assignment.title} ({highest_assignment.subject.capitalize()}) ({highest_assignment.get_percentage():.2f}%)") 
         if lowest_assignment:
             print(f"Lowest Scoring Assignment: {lowest_assignment.title} ({lowest_assignment.subject.capitalize()}) ({lowest_assignment.get_percentage():.2f}%)")
-            print("=" * 40)
+            print("=" * 50)
 
 
 

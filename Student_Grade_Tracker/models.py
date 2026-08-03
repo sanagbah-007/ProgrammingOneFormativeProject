@@ -4,7 +4,7 @@
 # uses inheritance to create specific subclasses for homework tasks and exam tasks.
 
 
-# Foundational class: holds the subject name, task title, max_score, due_date and assignment_type.
+# Base class: holds the subject name, task title, max_score, due_date and assignment_type.
 class Assignment:
     def __init__(self, subject, title, score, max_score, due_date, assignment_type):
         self.assignment_type = assignment_type.strip().lower()  # Convert assignment type to lowercase
@@ -27,14 +27,14 @@ class Assignment:
 class Homework(Assignment):
     def __init__(self, subject, title, score, max_score, due_date):
         super().__init__(subject, title, score, max_score, due_date, assignment_type ="homework") 
-        # Calls the foundational class constructor with the attributes specific to homework.
+        # Calls the base class constructor with the attributes specific to homework.
 
 
 # Subclass, Exam, inheriting from Assignment.
 class Exam(Assignment):
     def __init__(self, subject, title, score, max_score, due_date):
         super().__init__(subject, title, score, max_score, due_date, assignment_type ="exam") 
-        # Calls the foundational class constructor with the attributes specific to exams.
+        # Calls the base class constructor with the attributes specific to exams.
 
 
 
