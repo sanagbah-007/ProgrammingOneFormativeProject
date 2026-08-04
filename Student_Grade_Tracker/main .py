@@ -4,7 +4,7 @@
 # user input validation, and connects user choices to the GradeTracker engine.
 
 from abc import ABC, abstractmethod
-from Student_Grade_Tracker.models import Assignment, Homework, Exam
+from models import Assignment, Homework, Exam
 from tracker import GradeTracker
 
 class not_empty_input(ABC):
