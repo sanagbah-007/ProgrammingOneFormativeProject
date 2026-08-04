@@ -31,12 +31,12 @@ it fast and easy to use without cluttering your local machine with temporary fil
 ## Menu Structure
 When you launch the program, you will see the following menu:
 
-=== Grade Tracker Menu ===
-1. Add Assignment
-2. View All Assignments
-3. Filter Assignments
-4. View Summary
-0. Exit
+ === Grade Tracker Menu ===
+ 1. Add Assignment
+ 2. View All Assignments
+ 3. Filter Assignments
+ 4. View Summary
+ 0. Exit
 
 ## Sample Interaction
 1. Adding an Assignment
