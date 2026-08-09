@@ -38,6 +38,8 @@ When you launch the program, you will see the following menu:
  4. View Summary
  0. Exit
 
+   ![alt text](MenuStructure.png)
+
 ## Sample Interaction
 1. Adding an Assignment
 
@@ -49,7 +51,10 @@ When you launch the program, you will see the following menu:
  Enter due date (YYYY-MM-DD): 2025-10-15
  Enter assignment type (homework/exam): homework
 
-[+] Assignment successfully added!
+ [+] Assignment successfully added!
+
+   ![alt text](AddAssignment.png)
+
 
 2. Viewing All Assignments
 
@@ -58,6 +63,9 @@ When you launch the program, you will see the following menu:
  ======================================================================
  Homework   | Maths        | Algebra Quiz    | 18.0/20.0 | 2025-10-15
  ======================================================================
+
+   ![alt text](ViewAssignment.png)
+
 
 3. Summary Output
 
@@ -74,9 +82,25 @@ When you launch the program, you will see the following menu:
  Lowest Scoring Assignment: Algebra Quiz (Maths) (90.00%)
  ======================================================================
 
+   ![alt text](SummaryOutput.png)
 
 
+4. Filter Output
 
 
+ [/] Filter assignments
+ 1. By subject
+ 2. By assignment type
+ 3. By month (YYYY-MM)
+ Choose a filter option (1-3): 1
+ Enter subject to filter by: maths
+
+ ======================================================================
+ Type       | Subject      | Title           | Score    | Due Date  
+ ======================================================================
+ Homework   | Maths        | Algebra Quiz    | 18.0/20.0 | 2025-10-15
+ ======================================================================
+
+   ![alt text](FilterOutput.png)
 
 
