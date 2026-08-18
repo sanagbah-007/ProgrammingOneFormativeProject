@@ -4,6 +4,7 @@
 # user input validation, and connects user choices to the GradeTracker engine.
 
 from abc import ABC, abstractmethod
+from datetime import datetime
 from models import Assignment, Homework, Exam
 from tracker import GradeTracker
 
@@ -35,6 +36,14 @@ def positive_float_input(prompt):
         except ValueError:
             print("[!] Invalid input. Please enter a valid number.")
 
+def validate_date(date_str):
+    # Validate the date format (YYYY-MM-DD).
+    try:
+        datetime.strptime(date_str, "%Y-%m-%d")
+        return True
+    except ValueError:
+        return False
+
 def add_assignment(tracker):
     # Function to add a new assignment to the tracker.
     print("\n[+] Add a new assignment")
@@ -50,7 +59,9 @@ def add_assignment(tracker):
         print("[!] Max score cannot be less than earned score.")
 
     due_date = not_empty_input("Enter due date (YYYY-MM-DD): ")
-
+    while not validate_date(due_date):
+        print("[!] Invalid date format. Please enter date in YYYY-MM-DD.")
+        due_date = not_empty_input("Enter due date (YYYY-MM-DD): ")
 
     # Prompt for assignment type and validate it.
     while True:
@@ -83,6 +94,9 @@ def filter_assignments(tracker):
         filtered = tracker.filter_assignments(assignment_type=assignment_type)
     elif choice == "3":
         month = not_empty_input("Enter month to filter by (YYYY-MM): ")
+        while not validate_date(f"{month}-01"):
+            print("[!] Invalid date format. Please enter month in YYYY-MM.")
+            month = not_empty_input("Enter month to filter by (YYYY-MM): ")
         filtered = tracker.filter_assignments(month=month)
     else:
         print("[!] Invalid choice. Please enter a number between 1 and 3.")
