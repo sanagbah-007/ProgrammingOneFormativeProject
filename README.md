@@ -56,6 +56,7 @@ When you launch the program, you will see the following menu:
 
 ### 1. Adding an Assignment
 
+```text
  [+] Add a new assignment
  Enter subject: Maths
  Enter title: Algebra Quiz
@@ -65,6 +66,7 @@ When you launch the program, you will see the following menu:
  Enter assignment type (homework/exam): homework
 
  [+] Assignment successfully added!
+```
 
 ![alt text](AddAssignment.png)
 
