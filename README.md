@@ -26,9 +26,16 @@ it fast and easy to use without cluttering your local machine with temporary fil
 
 1. Make sure Python 3 is installed on your computer.
 2. Open your terminal or command prompt and navigate to the project directory:
-        cd path/to/project
+
+```text
+cd path/to/project
+```
+
 3. Run the main script:
-        python main.py
+
+```text
+python main.py
+```
 
 ## Menu Structure
 
